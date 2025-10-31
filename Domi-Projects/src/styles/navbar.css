@@ -54,10 +54,10 @@ body {
 
 /* Efecto hover con escalado */
 .navbar a:hover {
-    background-color: rgba(221, 221, 221, 0.164);
+    /* background-color: rgba(221, 221, 221, 0.164); */
     color: rgb(245, 230, 92);
     transform: translateY(-2px) scale(1.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
 
 /* Línea animada debajo del link */

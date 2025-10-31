@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './styles/App.css'
 import {Navbar} from './componets/navbar.tsx'
+import { Header } from './componets/header.tsx'
 
  export function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,8 @@ import {Navbar} from './componets/navbar.tsx'
     <>
     <div className='bg-gradient-to-b from-blue-500 to-purple-600 min-h-screen'>
     <Navbar />
+    <Header />
+
       <div className="flex justify-center items-center min-h-screen ">
         
         <a href="https://vite.dev" target="_blank">
