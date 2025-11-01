@@ -1,41 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Trayectoria } from './componets/trayectoria';
+import { Contact } from './componets/contact';
 import './styles/App.css'
 import {Navbar} from './componets/navbar.tsx'
 import { Header } from './componets/header.tsx'
+import './styles/index.css';
+import './scripts/scroll-indicator.js';
+import { Projects } from './componets/projects';
 
  export function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <div className='bg-gradient-to-b from-blue-500 to-purple-600 min-h-screen'>
+    <div className='min-h-screen'>
+    
     <Navbar />
+    <div id="scroll-progress" aria-hidden="true"></div>
     <Header />
+    <Projects />
+    <Trayectoria />
+    <Contact />
 
-      <div className="flex justify-center items-center min-h-screen ">
-        
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      </div>
+    </div>
     </>
   )
 }

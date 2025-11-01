@@ -1,0 +1,247 @@
+.projects-section {
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    overflow: hidden;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Imagen a la derecha (índice par) */
+.project-card.image-right {
+    grid-template-areas: "content image";
+}
+
+.project-card.image-right .project-content {
+    grid-area: content;
+}
+
+.project-card.image-right .project-image {
+    grid-area: image;
+}
+
+/* Imagen a la izquierda (índice impar) */
+.project-card.image-left {
+    grid-template-areas: "image content";
+}
+
+.project-card.image-left .project-content {
+    grid-area: content;
+}
+
+.project-card.image-left .project-image {
+    grid-area: image;
+}
+
+/* Imagen del proyecto */
+.project-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(245, 230, 92, 0.1), rgba(26, 26, 46, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-image:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Contenido del proyecto */
+.project-content {
+    padding: 1rem;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Tecnologías */
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    padding: 0.4rem 0.9rem;
+    background: rgba(245, 230, 92, 0.1);
+    color: #f5e65c;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(245, 230, 92, 0.3);
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(245, 230, 92, 0.2);
+    border-color: rgba(245, 230, 92, 0.5);
+}
+
+/* Enlaces del proyecto */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.project-link:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(4px);
+}
+
+.project-link-primary {
+    background: #f5e65c;
+    color: #1a1a2e;
+    border-color: #f5e65c;
+}
+
+.project-link-primary:hover {
+    background: transparent;
+    color: #f5e65c;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .project-card,
+    .project-card.image-right,
+    .project-card.image-left {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "image"
+            "content";
+        gap: 2rem;
+    }
+
+    .project-image img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        gap: 3rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+}
