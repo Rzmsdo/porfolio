@@ -12,14 +12,14 @@ export const Header = () => {
 
                 {/* Título profesional con efecto typewriter */}
                 <div className="title-container">
-                    <h2 className="title">
-                        <span className="typewriter">Desarrollador Full Stack, integrando IA Generativa en mis proyectos</span>
-                    </h2>
+                    <h3 className="title">
+                        <span className="typewriter">Desarrollador Full Stack, tus proyectos con IA Generativa</span>
+                    </h3>
                 </div>
 
                 {/* Descripción breve */}
                 <p className="description">
-                    <span>Apasionado por crear experiencias web integrando distintas IAs y tecnologías para lograr soluciones modernas y funcionales. </span><br />
+                    <span>Apasionado por crear experiencias webs integrando distintas IAs con diversas funcionalidades y distintas tecnologías para lograr soluciones modernas y funcionales. </span><br />
                     <span style={{ color: '#6b7280' }}> Stack: React, Next.js, TypeScript, Python. Heramientas: Figma, Miro, Supabase</span>
                 </p>
 
