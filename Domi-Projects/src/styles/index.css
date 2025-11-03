@@ -98,3 +98,19 @@ body {
 html {
     overflow-x: hidden;
 }
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+
+    body {
+        padding-left: 8px;
+        padding-right: 8px;
+        background-position: center;
+    }
+
+    #root {
+        padding: 0;
+        max-width: 100%;
+    }
+}
