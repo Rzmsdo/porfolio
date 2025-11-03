@@ -344,3 +344,38 @@
         padding: 1.5rem;
     }
 }
+/* Ajustes extra para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .trayectoria-section {
+        padding: 2rem 0.6rem;
+    }
+
+    .timeline-item {
+        margin-bottom: 1.5rem;
+        gap: 1rem;
+    }
+
+    .marker-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-position {
+        font-size: 1.05rem;
+    }
+
+    .timeline-description,
+    .timeline-responsibilities li {
+        font-size: 0.95rem;
+    }
+
+    .tech-badge {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}

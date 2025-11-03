@@ -112,3 +112,28 @@ body {
         transform: translateY(0);
     }
 }
+/* Navbar para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.2rem 0.6rem;
+        justify-content: flex-center;
+        backdrop-filter: blur(6px);
+        position: sticky;
+    }
+
+    .navbar-links {
+        gap: 0.4rem;
+        overflow-x: auto;
+        padding: 0 0.25rem;
+    }
+
+    .navbar-links li {
+        display: inline-block;
+    }
+
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+}

@@ -244,4 +244,42 @@
     .project-description {
         font-size: 0.95rem;
     }
+}/* Ajustes adicionales para móviles muy pequeños */
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 2rem 0.6rem;
+    }
+
+    .projects-grid {
+        gap: 2rem;
+    }
+
+    .project-card {
+        gap: 1rem;
+    }
+
+    .project-image img {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: 0.6rem;
+    }
+
+    .project-title {
+        font-size: 1.15rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        gap: 0.5rem;
+    }
+
+    .tech-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.78rem;
+    }
 }
