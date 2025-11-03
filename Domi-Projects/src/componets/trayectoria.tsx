@@ -10,56 +10,54 @@ interface Experience {
     responsibilities: string[];
     technologies: string[];
     location: string;
-    type: 'work' | 'education';
+    type: 'Trabajo' | 'Formación' | 'Proyecto personal';
 }
 
 const experienceData: Experience[] = [
     {
         id: 1,
-        company: "Tech Solutions S.A.",
-        position: "Desarrollador Full Stack Senior",
-        period: "2022 - Presente",
-        description: "Liderando el desarrollo de aplicaciones web escalables con integración de IA.",
+        company: "Desarrollo Personal",
+        position: "Desarrollador Full Stack",
+        period: "2025 - Presente",
+        description: "Desarrollo de aplicacion web escalable con integración de IA.",
         responsibilities: [
-            "Arquitectura y desarrollo de microservicios con Node.js y Python",
-            "Implementación de soluciones de IA generativa para automatización",
-            "Mentoría a equipo de 5 desarrolladores junior",
-            "Optimización de rendimiento y reducción de costos en un 40%"
+            "Arquitectura y desarrollo de microservicios con Python y Supabase",
+            "Implementación de soluciones de IA generativa para analisis de datos",            
+            "Optimización de rendimiento"
         ],
-        technologies: ["React", "TypeScript", "Node.js", "Python", "AWS", "Docker", "OpenAI"],
-        location: "Madrid, España",
-        type: "work"
+        technologies: ["Next.js", "TypeScript", "Python", "Supabase", "Docker", "AI"],
+        location: "Calpe, España",
+        type: "Proyecto personal",
     },
     {
         id: 2,
-        company: "Universidad Politécnica",
-        position: "Ingeniería en Informática",
-        period: "2018 - 2022",
-        description: "Grado en Ingeniería Informática con especialización en Inteligencia Artificial.",
+        company: "Facticia Studio",
+        position: "Desarrollador Full Stack junior",
+        period: "04/2025 - 10/2025",
+        description: "Desarrollo de plataforma web con integración de varias IAs.",
         responsibilities: [
-            "Proyecto final: Sistema de recomendación con Deep Learning",
-            "Prácticas en empresa del sector tecnológico",
-            "Participación en hackathons y competiciones de programación"
+            "Desarrollo y aportaciones en frontend y backend",
+            "Prompt engineering para integración de IA ",
+            "Participación en planificación en arquitectura del software"
         ],
-        technologies: ["Python", "Machine Learning", "TensorFlow", "Java", "SQL"],
-        location: "Madrid, España",
-        type: "education"
+        technologies: ["Python", "FastAPI", "Supabase", "IA", "Next.js", "Typescript"],
+        location: "Remoto",
+        type: "Trabajo"
     },
     {
         id: 3,
-        company: "StartupLab Inc.",
-        position: "Desarrollador Frontend",
-        period: "2021 - 2022",
+        company: "4Geeks Academy España",
+        position: "Curso desarrollo Full Stack",
+        period: "10/2024 - 03/2025",
         description: "Desarrollo de interfaces modernas y responsivas para plataforma SaaS.",
         responsibilities: [
             "Creación de componentes reutilizables con React",
             "Implementación de diseños responsive y accesibles",
-            "Integración con APIs RESTful y GraphQL",
-            "Mejora de métricas de rendimiento web (Core Web Vitals)"
+            "Integración con APIs RESTful y GraphQL"
         ],
-        technologies: ["React", "JavaScript", "SCSS", "GraphQL", "Jest"],
+        technologies: ["React", "JavaScript", "Bootstrap", "SQLAlchemy", "Flask", "FastAPI"],
         location: "Remoto",
-        type: "work"
+        type: "Formación"
     },
     {
         id: 4,
@@ -75,7 +73,7 @@ const experienceData: Experience[] = [
         ],
         technologies: ["HTML", "CSS", "JavaScript", "WordPress", "PHP"],
         location: "Madrid, España",
-        type: "work"
+        type: "Trabajo"
     }
 ];
 
@@ -99,7 +97,7 @@ export const Trayectoria = () => {
                         >
                             <div className="timeline-marker">
                                 <div className="marker-icon">
-                                    {exp.type === 'work' ? (
+                                    {exp.type === 'Trabajo' ? (
                                         <i className="fas fa-briefcase"></i>
                                     ) : (
                                         <i className="fas fa-graduation-cap"></i>

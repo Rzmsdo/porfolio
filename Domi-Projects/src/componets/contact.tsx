@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/contact.css';
+import { EMAILJS_CONFIG, validateEmailJSConfig } from '../config/emailjs';
 
 interface FormData {
     name: string;
@@ -71,19 +73,46 @@ export const Contact = () => {
         setIsSubmitting(true);
         setSubmitStatus('idle');
 
-        // Simulación de envío (aquí integrarías tu backend o servicio como EmailJS, Formspree, etc.)
         try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            console.log('Formulario enviado:', formData);
+            // Validar configuración de EmailJS
+            const validation = validateEmailJSConfig();
+            if (!validation.isValid) {
+                throw new Error(`EmailJS no está configurado correctamente. Faltan variables: ${validation.missing.join(', ')}`);
+            }
+
+            // Preparar los parámetros para EmailJS
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                to_email: EMAILJS_CONFIG.TO_EMAIL // Usar email desde .env
+            };
+
+            // Enviar email usando EmailJS
+            const result = await emailjs.send(
+                EMAILJS_CONFIG.SERVICE_ID,
+                EMAILJS_CONFIG.TEMPLATE_ID,
+                templateParams,
+                EMAILJS_CONFIG.PUBLIC_KEY
+            );
+
+            console.log('Email enviado exitosamente:', result.text);
             
             setSubmitStatus('success');
             setFormData({ name: '', email: '', subject: '', message: '' });
             
+            // Limpiar mensaje de éxito después de 5 segundos
             setTimeout(() => setSubmitStatus('idle'), 5000);
+            
         } catch (error) {
-            console.error('Error al enviar:', error);
+            console.error('Error al enviar el email:', error);
             setSubmitStatus('error');
+            
+            // Mostrar error específico en desarrollo
+            if (import.meta.env.DEV) {
+                console.error('Detalles del error:', error);
+            }
         } finally {
             setIsSubmitting(false);
         }
