@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/projects.css';
-
+import facticiaImage from '../assets/facticia.png';
+import linkupImage from '../assets/linkup.png';
 interface Project {
     id: number;
     title: string;
@@ -27,7 +28,7 @@ const projectsData: Project[] = [
         title: "Facticia Studio app",
         description: "Plataforma para la creacion de contenido y sports publicitarios. Incluye gestion de diversos perfiles por usuario, persistencia de sesion, descargas de planificacion, creativos y spots publicitarios.",
         technologies: ["Next.js", "Typescript", "Zustand", "Python", "FastAPI", "PostgreSQL", "IAs generativas"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+        image: facticiaImage,
         web: "https://facticiastudio.com"
     },
     {
@@ -35,8 +36,10 @@ const projectsData: Project[] = [
         title: "Linkup",
         description: "Gestor de gastos entre particulares, familiares, amigos, ...  Ayuda a dividir y gestionar los gastos de eventos como viajes, cenas, regalos, compañeros de pisos. Incluye envío de emails para invitación a grupos, recordatorios y resumen de gastos.",
         technologies: [ "Javascript", "React", "Python", "SQLAlchemy", "FLask"],
-        image: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&h=500&fit=crop",
-        github: "https://github.com/Rzmsdo/LinkUp"
+        image: linkupImage,
+        github: "https://github.com/Rzmsdo/LinkUp",
+        demo: "https://sample-service-name-4h1m.onrender.com/"
+
     },
     {
         id: 4,
