@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Trayectoria } from './componets/trayectoria';
 import { Contact } from './componets/contact';
 import './styles/App.css'
@@ -9,11 +8,10 @@ import './scripts/scroll-indicator.js';
 import { Projects } from './componets/projects';
 
  export function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <div className='min-h-screen'>
+    <div style={{ minHeight: '100vh' }}>
     
     <Navbar />
     <div id="scroll-progress" aria-hidden="true"></div>

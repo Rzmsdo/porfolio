@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/header.css';
 
 export const Header = () => {
@@ -21,7 +20,7 @@ export const Header = () => {
                 {/* Descripción breve */}
                 <p className="description">
                     <span>Apasionado por crear experiencias web integrando distintas IAs y tecnologías para lograr soluciones modernas y funcionales. </span><br />
-                    <span className='text-gray-500'> Stack: React, Next.js, Tailwindcss, TypeScript, Python. Heramientas: Figma, Miro, Supabase</span>
+                    <span style={{ color: '#6b7280' }}> Stack: React, Next.js, TypeScript, Python. Heramientas: Figma, Miro, Supabase</span>
                 </p>
 
                 {/* Call to action buttons */}
