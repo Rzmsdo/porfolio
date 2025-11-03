@@ -70,6 +70,6 @@ export const useEmailJS = (): UseEmailJSReturn => {
         isLoading,
         error,
         success,
-        reset
+        reset,
     };
 };
