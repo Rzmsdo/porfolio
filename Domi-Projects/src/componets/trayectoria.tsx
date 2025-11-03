@@ -61,18 +61,18 @@ const experienceData: Experience[] = [
     },
     {
         id: 4,
-        company: "Digital Agency",
-        position: "Desarrollador Web Junior",
-        period: "2020 - 2021",
+        company: "Distintas empresas",
+        position: "Responsable parkings, Gerente mantenimiento",
+        period: "2000 - 2024",
         description: "Primer contacto profesional desarrollando sitios web para clientes diversos.",
         responsibilities: [
-            "Desarrollo de landing pages y sitios corporativos",
-            "Maquetación responsive con HTML5, CSS3 y JavaScript",
-            "Mantenimiento y actualización de sitios WordPress",
-            "Colaboración con diseñadores y equipo de marketing"
+            "Gestión de dos parkings, con 7 personas a cargo",
+            "Gestion de mantenimiento y reparaciones de una gran cadena supermercados",
+            "Mantenimiento y actualización de sitios WordPress alquileres vacacionales",
+            
         ],
-        technologies: ["HTML", "CSS", "JavaScript", "WordPress", "PHP"],
-        location: "Madrid, España",
+        technologies: ["Html", "CSS", "JavaScript", "WordPress"],
+        location: "Alicante, España",
         type: "Trabajo"
     }
 ];

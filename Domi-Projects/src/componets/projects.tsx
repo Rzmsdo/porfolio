@@ -41,14 +41,14 @@ const projectsData: Project[] = [
         demo: "https://sample-service-name-4h1m.onrender.com/"
 
     },
-    {
+   {
         id: 4,
-        title: "AI Content Generator",
-        description: "Generador de contenido usando modelos de lenguaje avanzados. Crea artículos, posts para redes sociales y descripciones de productos automáticamente.",
-        technologies: ["Python", "FastAPI", "React", "GPT-4", "Pinecone"],
+        title: "Arkabloid",
+        description: "Juego para dispositivos moviles basado en el clásico Arkanoid. Incluye múltiples niveles, power-ups y tablas de clasificación. Proximamente disponible en Google Play. Actualmente en actualización.",
+        technologies: [ "React Native", "Firebase", "Expo"],
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
-        github: "https://github.com/usuario/ai-content-generator",
-        demo: "https://demo-ai-content.com"
+       
+        
     }
 ];
 
