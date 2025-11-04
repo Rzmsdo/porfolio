@@ -12,9 +12,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    background: rgba(26, 26, 46, 0.1);
     animation: slideDown 0.4s ease-out;
+    box-sizing: border-box;
 }
 
 /* Animación de entrada del navbar */
@@ -112,13 +115,46 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Navbar para tablets y pantallas medianas */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box;
+        backdrop-filter: blur(8px);
+        background: rgba(26, 26, 46, 0.15);
+    }
+
+    .navbar-links {
+        gap: 0.6rem;
+    }
+
+    .navbar a {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+}
+
 /* Navbar para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .navbar {
         padding: 0.2rem 0.6rem;
-        justify-content: flex-center;
+        justify-content: center;
         backdrop-filter: blur(6px);
-        position: sticky;
+        background: rgba(26, 26, 46, 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .navbar-links {
@@ -135,5 +171,39 @@ body {
         padding: 8px 10px;
         font-size: 0.9rem;
         border-radius: 6px;
+    }
+}
+
+/* Navbar para pantallas extra pequeñas */
+@media (max-width: 320px) {
+    .navbar {
+        padding: 0.2rem 0.3rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box;
+        backdrop-filter: blur(6px);
+        background: rgba(26, 26, 46, 0.25);
+    }
+
+    .navbar-links {
+        gap: 0.2rem;
+        overflow-x: auto;
+        padding: 0 0.1rem;
+    }
+
+    .navbar a {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+
+    /* Reducir efectos en pantallas muy pequeñas */
+    .navbar a:hover {
+        transform: translateY(-1px) scale(1.05);
     }
 }
